@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    /* color: white; */
+}
+.main_box{
+    height: 100vh;
+    background-image: url('photo.jpg');
+    background-size: cover;
+}
+.main_box input{
+    display: none;
+}
+.btn_one{
+    position: absolute;
+    /* z-index: 0; */
+    left: 7px;
+    top: 10px;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+.btn_one label  i{
+    color: white;
+    font-size: 30px;
+    line-height: 40px;
+}
+.sidebar_menu{
+    width: 20%;
+    position: fixed; 
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    font-size: 1.4em;
+    height: 100vh;
+    left: -300px;
+    transition: left .2s linear;
+    z-index: 1;
+}
+.sidebar_menu .logo{
+    display: absolute;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 35px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    
+    
+}
+.btn_two{
+    position: absolute;
+    left: 260px;
+    top: 10px;
+}
+.btn_two label  i{
+    color: gray;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+.menu ul{
+    position: absolute;
+    list-style: none;
+}
+.menu ul li{
+    margin-top: 6px;
+    padding: 10px 20px;
+    color: white;
+    width: 248px;
+    /* height: 150px; */
+}
+.menu ul li:hover{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu ul li i{
+    padding-right: 6px;
+}
+.social_media{
+    position: absolute;
+    bottom: 36px;
+    left: 70px;
+    /* opacity: 0.5; */
+    color: gray;
+    z-index: 1;
+}
+.social_media i{
+    padding-right: 10px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+}
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+.btn_two:hover{
+    transform: scale(1.2);
+    
+} 
+.btn_one:hover{
+    transform: scale(1.2);
+    
+} 
+#check:checked ~ .sidebar_menu{
+    left: 0px;
+}
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+#copyright{
+    color: white;
+    
+    font-size: 13px;
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+}
+@media(max-width:767px){
+    .main_box{
+        background-size: contain;
+    }
+    .sidebar_menu{
+        width: 50%;
+    }
+    .sidebar_menu::-webkit-scrollbar{
+        height: 10px;
+        width: 5px;
+        background-color: gray;
+        
+    }
+    .sidebar_menu .logo a {
+        font-size: 17px;
+        left: 22px;
+    }
+    .menu ul li{
+        font-size: 20px;
+        padding: 18px 15px;
+        width: 178px;
+    }
+    .btn_two{
+        left: 183px;
+        font-size: 20px;
+    }
+    .social_media{
+        left: 37px;
+        bottom: 42px;
+        font-size: 20px;
+    }
+    #copyright{
+        font-size: 9px;
+    }
+    .menu ul li:hover{
+        filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.5));
+        box-shadow: none;
+    }
+}
